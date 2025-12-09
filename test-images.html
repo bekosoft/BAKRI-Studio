@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الصور</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+            border-bottom: 3px solid #FF6F3C;
+            padding-bottom: 10px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-item {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-label {
+            padding: 8px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #222;">اختبار عرض الصور المحلية</h1>
+
+    <div class="section">
+        <h2>هوية بصرية 1 - المجلد 1 (Hiv)</h2>
+        <div class="image-grid" id="folder1"></div>
+    </div>
+
+    <div class="section">
+        <h2>هوية بصرية 2 - المجلد 2 (Hi)</h2>
+        <div class="image-grid" id="folder2"></div>
+    </div>
+
+    <div class="section">
+        <h2>هوية بصرية 3 - المجلد 3 (Hiii)</h2>
+        <div class="image-grid" id="folder3"></div>
+    </div>
+
+    <div class="section">
+        <h2>هوية بصرية 4 - المجلد 5 (Hii)</h2>
+        <div class="image-grid" id="folder5"></div>
+    </div>
+
+    <div class="section">
+        <h2>موشن جرافيك - صور R (1-10)</h2>
+        <div class="image-grid" id="motion"></div>
+    </div>
+
+    <div class="section">
+        <h2>جرافيك ديزاين - صور R (11-16)</h2>
+        <div class="image-grid" id="graphic"></div>
+    </div>
+
+    <script>
+        // Folder 1 - Hiv images
+        const folder1Images = [
+            'image/1/Hiv (1).jpg',
+            'image/1/Hiv (2).jpg',
+            'image/1/Hiv (3).jpg',
+            'image/1/Hiv (4).jpg',
+            'image/1/Hiv (5).jpg',
+            'image/1/Hiv (6).jpg',
+            'image/1/Hiv (7).jpg',
+            'image/1/Hiv (8).jpg',
+            'image/1/Hiv (9).jpg',
+            'image/1/Hiv (10).jpg'
+        ];
+
+        // Folder 2 - Hi images
+        const folder2Images = [
+            'image/2/Hi (1).png',
+            'image/2/Hi (2).png',
+            'image/2/Hi (3).png',
+            'image/2/Hi (4).png',
+            'image/2/Hi (5).png',
+            'image/2/Hi (6).png',
+            'image/2/Hi (7).png',
+            'image/2/Hi (8).png',
+            'image/2/Hi (9).png',
+            'image/2/Hi (10).png',
+            'image/2/Hi (11).png',
+            'image/2/Hi (12).png',
+            'image/2/Hi (13).png',
+            'image/2/Hi (14).png',
+            'image/2/Hi (15).png',
+            'image/2/Hi (16).png'
+        ];
+
+        // Folder 3 - Hiii images
+        const folder3Images = [
+            'image/3/Hiii (1).png',
+            'image/3/Hiii (2).png',
+            'image/3/Hiii (3).png',
+            'image/3/Hiii (4).png',
+            'image/3/Hiii (5).png',
+            'image/3/Hiii (6).png',
+            'image/3/Hiii (7).png',
+            'image/3/Hiii (8).png',
+            'image/3/Hiii (9).png'
+        ];
+
+        // Folder 5 - Hii images
+        const folder5Images = [
+            'image/5/Hii (1).png',
+            'image/5/Hii (2).png',
+            'image/5/Hii (3).png',
+            'image/5/Hii (4).png',
+            'image/5/Hii (5).png',
+            'image/5/Hii (6).png',
+            'image/5/Hii (7).png',
+            'image/5/Hii (8).png'
+        ];
+
+        // Motion Graphics - R images
+        const motionImages = [
+            'image/R (1).jpg',
+            'image/R (6).jpg',
+            'image/R (7).jpg',
+            'image/R (8).jpg',
+            'image/R (9).jpg',
+            'image/R (10).jpg'
+        ];
+
+        // Graphic Design - R images
+        const graphicImages = [
+            'image/R (11).jpg',
+            'image/R (12).jpg',
+            'image/R (13).jpg',
+            'image/R (14).jpg',
+            'image/R (15).jpg',
+            'image/R (16).jpg'
+        ];
+
+        function renderImages(containerId, images, label) {
+            const container = document.getElementById(containerId);
+            images.forEach((src, index) => {
+                const div = document.createElement('div');
+                div.className = 'image-item';
+                div.innerHTML = `
+                    <img src="${src}" alt="${label} ${index + 1}" onerror="this.parentElement.style.border='3px solid red'; this.alt='فشل التحميل'">
+                    <div class="image-label">${label} ${index + 1}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        renderImages('folder1', folder1Images, 'Hiv');
+        renderImages('folder2', folder2Images, 'Hi');
+        renderImages('folder3', folder3Images, 'Hiii');
+        renderImages('folder5', folder5Images, 'Hii');
+        renderImages('motion', motionImages, 'Motion R');
+        renderImages('graphic', graphicImages, 'Graphic R');
+    </script>
+</body>
+
+</html>

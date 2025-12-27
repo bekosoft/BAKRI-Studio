@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,7 +32,7 @@
   </script>
   <style>
     body {
-      font-family: 'Cairo', 'Open Sans', sans-serif;
+      font-family: 'Open Sans', 'Cairo', sans-serif;
     }
 
     h1,
@@ -41,7 +41,17 @@
     h4,
     h5,
     h6 {
-      font-family: 'Cairo', 'Montserrat', sans-serif;
+      font-family: 'Montserrat', 'Cairo', sans-serif;
+    }
+
+    html[lang="ar"] body,
+    html[lang="ar"] h1,
+    html[lang="ar"] h2,
+    html[lang="ar"] h3,
+    html[lang="ar"] h4,
+    html[lang="ar"] h5,
+    html[lang="ar"] h6 {
+      font-family: 'Cairo', sans-serif;
     }
 
     /* Smooth transitions for theme and language switching */
@@ -93,83 +103,82 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="#" class="flex items-center space-x-2 space-x-reverse">
-          <a href="#home" class="flex items-center space-x-2">
-            <div class="w-10 h-10 text-brand-orange">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <path
-                  d="M32 54C44.1503 54 54 44.1503 54 32C54 19.8497 44.1503 10 32 10C19.8497 10 10 19.8497 10 32C10 44.1503 19.8497 54 32 54Z"
-                  stroke="#222222" stroke-opacity="0.1" stroke-width="2" />
-                <path d="M32 50C38.2438 50 43.4355 46.7029 46.5492 41.6583L32 32V50Z" fill="#FF6F3C" />
-                <path d="M32 14C25.7562 14 20.5645 17.2971 17.4508 22.3417L32 32V14Z" fill="#FF6F3C" />
-                <path d="M14 32C14 38.2438 17.2971 43.4355 22.3417 46.5492L32 32H14Z" fill="#007BFF" />
-                <path d="M50 32C50 25.7562 46.7029 20.5645 41.6583 17.4508L32 32H50Z" fill="#007BFF" />
-                <path d="M29.5 30.5L32 25L34.5 30.5L38 32L34.5 33.5L32 38L29.5 33.5L26 32L29.5 30.5Z" fill="white" />
-              </svg>
-            </div>
-            <div class="flex items-baseline">
-              <span class="font-montserrat font-bold text-2xl tracking-tighter mr-1">
-                <span class="text-brand-blue">BAK</span>
-                <span class="text-brand-orange">RI</span>
-              </span>
-              <span class="text-gray-500 font-montserrat font-light text-xl">Studio</span>
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex items-center gap-8">
-            <a href="#home"
-              class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
-              data-i18n="home">Home</a>
-            <a href="#services"
-              class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
-              data-i18n="services">Services</a>
-            <a href="#portfolio"
-              class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
-              data-i18n="works">Works</a>
-            <a href="#about"
-              class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
-              data-i18n="about">About</a>
-            <a href="#contact"
-              class="px-6 py-2 rounded-full bg-brand-dark text-white hover:bg-gray-800 transition-colors shadow-md font-medium"
-              data-i18n="contact">Contact</a>
-
-            <!-- Language Switcher -->
-            <button id="lang-toggle"
-              class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-brand-blue transition-colors font-bold">
-              <span id="lang-toggle-text">AR</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
-                </path>
-              </svg>
-            </button>
-
-            <!-- Dark Mode Toggle -->
-            <button id="theme-toggle"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-              <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg>
-              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  fill-rule="evenodd" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </nav>
-
-          <!-- Mobile Menu Button -->
-          <div class="md:hidden flex items-center space-x-4">
-            <!-- Mobile Lang Toggle -->
-            <button id="mobile-lang-toggle" class="text-gray-600 dark:text-gray-300 font-bold">AR</button>
-
-            <button id="menu-btn" class="block hamburger focus:outline-none">
-              <span class="hamburger-top bg-gray-900 dark:bg-white"></span>
-              <span class="hamburger-middle bg-gray-900 dark:bg-white"></span>
-              <span class="hamburger-bottom bg-gray-900 dark:bg-white"></span>
-            </button>
+        <a href="#home" class="flex items-center space-x-2 space-x-reverse">
+          <div class="w-10 h-10 text-brand-orange">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+              <path
+                d="M32 54C44.1503 54 54 44.1503 54 32C54 19.8497 44.1503 10 32 10C19.8497 10 10 19.8497 10 32C10 44.1503 19.8497 54 32 54Z"
+                stroke="#222222" stroke-opacity="0.1" stroke-width="2" />
+              <path d="M32 50C38.2438 50 43.4355 46.7029 46.5492 41.6583L32 32V50Z" fill="#FF6F3C" />
+              <path d="M32 14C25.7562 14 20.5645 17.2971 17.4508 22.3417L32 32V14Z" fill="#FF6F3C" />
+              <path d="M14 32C14 38.2438 17.2971 43.4355 22.3417 46.5492L32 32H14Z" fill="#007BFF" />
+              <path d="M50 32C50 25.7562 46.7029 20.5645 41.6583 17.4508L32 32H50Z" fill="#007BFF" />
+              <path d="M29.5 30.5L32 25L34.5 30.5L38 32L34.5 33.5L32 38L29.5 33.5L26 32L29.5 30.5Z" fill="white" />
+            </svg>
           </div>
+          <div class="flex items-baseline">
+            <span class="font-montserrat font-bold text-2xl tracking-tighter mr-1">
+              <span class="text-brand-blue">BAK</span>
+              <span class="text-brand-orange">RI</span>
+            </span>
+            <span class="text-gray-500 font-montserrat font-light text-xl">Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home"
+            class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
+            data-i18n="home">Home</a>
+          <a href="#services"
+            class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
+            data-i18n="services">Services</a>
+          <a href="#portfolio"
+            class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
+            data-i18n="works">Works</a>
+          <a href="#about"
+            class="text-gray-600 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue font-medium transition-colors"
+            data-i18n="about">About</a>
+          <a href="#contact"
+            class="px-6 py-2 rounded-full bg-brand-dark text-white hover:bg-gray-800 transition-colors shadow-md font-medium"
+            data-i18n="contact">Contact</a>
+
+          <!-- Language Switcher -->
+          <button id="lang-toggle"
+            class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-brand-blue transition-colors font-bold">
+            <span id="lang-toggle-text">EN</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+              </path>
+            </svg>
+          </button>
+
+          <!-- Dark Mode Toggle -->
+          <button id="theme-toggle"
+            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center space-x-4">
+          <!-- Mobile Lang Toggle -->
+          <button id="mobile-lang-toggle" class="text-gray-600 dark:text-gray-300 font-bold">EN</button>
+
+          <button id="menu-btn" class="block hamburger focus:outline-none">
+            <span class="hamburger-top bg-gray-900 dark:bg-white"></span>
+            <span class="hamburger-middle bg-gray-900 dark:bg-white"></span>
+            <span class="hamburger-bottom bg-gray-900 dark:bg-white"></span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -186,10 +195,7 @@
     </div>
   </header>
 
-  </svg>
-  </a>
-  </div>
-  </div>
+
   <main class="pt-20">
     <!-- Hero Section -->
     <section id="home"
@@ -297,17 +303,18 @@
           <span
             class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 text-brand-blue font-bold uppercase tracking-widest text-xs mb-4"
             data-i18n="brandCaseStudies">
-            دراسات حالة
+            Case Studies
           </span>
           <h2 class="text-4xl md:text-5xl font-extrabold font-montserrat text-brand-dark dark:text-white">
-            <span data-i18n="brandIdentityTitle">متكاملة</span> <span
+            <span data-i18n="brandIdentityTitle">Comprehensive</span> <span
               class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-pink-500"
-              data-i18n="brandIdentitySubtitle">هويات
-              بصرية</span>
+              data-i18n="brandIdentitySubtitle">Visual
+              Identities</span>
           </h2>
           <p class="text-gray-500 dark:text-gray-400 mt-6 max-w-2xl mx-auto text-lg font-light"
             data-i18n="brandIdentityDesc">
-            نحن نصيغ أنظمة العلامة التجارية الشاملة التي تروي قصتك الفريدة عبر كل نقطة اتصال رقمية ومادية.
+            We craft comprehensive brand systems that tell your unique story across every digital and physical
+            touchpoint.
           </p>
         </div>
 
@@ -692,7 +699,7 @@
 
     <section class="py-16 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-center text-gray-500 font-medium mb-8" data-i18n="successPartners">شركاء النجاح</p>
+        <p class="text-center text-gray-500 font-medium mb-8" data-i18n="successPartners">Success Partners</p>
         <div
           class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
           <span class="text-2xl font-bold text-[#007BFF]">TechFlow</span>
@@ -716,21 +723,27 @@
               class="relative rounded-2xl shadow-2xl w-full object-cover z-10">
           </div>
           <div class="lg:w-1/2 space-y-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark dark:text-white" data-i18n="aboutTitle">عن استوديو
-              بكري</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark dark:text-white" data-i18n="aboutTitle">About
+              Bakri Studio</h2>
             <div class="w-20 h-1 bg-brand-orange rounded-full"></div>
-            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed" data-i18n="aboutDesc1">
-              أهلاً بكم أنا  بكري علي . أنا مصمم ومطور ومبدع شغوف، وأؤمن بقوة الابتكار الرقمي. بالنسبة لي، الأمر لا يتعلق فقط بالتصميم، بل بتحويل الأفكار الرائعة إلى واقع ملموس.
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-justify" data-i18n="aboutDesc1">
+              Hello, I'm Bakri Ali. I'm a passionate designer, developer, and creative, and I believe in the power of
+              digital innovation. For me, it's not just about design; it's about transforming brilliant ideas into
+              tangible realities.
 
-أؤمن بأن الفكرة الجيدة تحتاج إلى تنفيذ مثالي، وهذا ما أكرسه في كل مشروع. مهمتي هي تحويل رؤية عملائي إلى تجربة رقمية لا تُنسى، شيء جميل وفعال في نفس الوقت.
+              I believe that a good idea needs perfect execution, and that's what I dedicate myself to in every project.
+              My mission is to transform my clients' vision into an unforgettable digital experience—something beautiful
+              and effective.
             </p>
-            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed" data-i18n="aboutDesc2">
-              أعمل عن كثب مع عملائي لأفهم أهدافهم الفريدة، وأقدم حلولاً إبداعية وعملية تركز على الجودة والتكنولوجيا. أسعى دائماً لخلق تأثير دائم ومحفز للنمو.
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-justify" data-i18n="aboutDesc2">
+              We approach every project with a collaborative spirit, working closely with our clients to understand
+              their unique goals. With a focus on quality, creativity, and technology, we deliver solutions that drive
+              growth and create lasting impact.
             </p>
             <a href="#contact"
               class="inline-block px-8 py-3 rounded-full bg-brand-dark text-white font-bold hover:bg-gray-800 transition-colors shadow-lg mt-4"
               data-i18n="letsStart">
-              لنبدأ معاً
+              Let's Start Together
             </a>
           </div>
         </div>
@@ -741,10 +754,12 @@
     <section id="contact" class="py-20 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark dark:text-white" data-i18n="contactTitle">تواصل
-            معنا</h2>
-          <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contactDesc">لديك مشروع في ذهنك؟ نود أن نسمع
-            منك.</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark dark:text-white" data-i18n="contactTitle">
+            Contact
+            Us</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contactDesc">Have a project in mind? We'd love
+            to hear
+            from you.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -762,8 +777,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="addressLabel">العنوان</h3>
-                <p class="text-gray-600 dark:text-gray-400" data-i18n="addressValue">١٢٣ شارع التقنية، المدينة</p>
+                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="addressLabel">Address</h3>
+                <p class="text-gray-600 dark:text-gray-400" data-i18n="addressValue">123 Tech Street, City</p>
               </div>
             </div>
 
@@ -778,9 +793,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="emailLabel">البريد
-                  الإلكتروني</h3>
-                <p class="text-gray-600 dark:text-gray-400" data-i18n="emailValue">info@bakristudio.com</p>
+                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="emailLabel">Email</h3>
+                <p class="text-gray-600 dark:text-gray-400" data-i18n="emailValue">bekosoft149@gmail.com</p>
               </div>
             </div>
 
@@ -795,7 +809,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="phoneLabel">الهاتف</h3>
+                <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="phoneLabel">Phone</h3>
                 <p class="text-gray-600 dark:text-gray-400" dir="ltr" data-i18n="phoneValue">+249 922225399</p>
               </div>
             </div>
@@ -806,38 +820,37 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                  data-i18n="nameLabel">الاسم</label>
+                  data-i18n="nameLabel">Name</label>
                 <input type="text" id="name"
                   class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
-                  data-i18n-placeholder="namePlaceholder" placeholder="اسمك الكريم">
+                  data-i18n-placeholder="namePlaceholder" placeholder="Your Name">
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                  data-i18n="emailInputLabel">البريد
-                  الإلكتروني</label>
-                <input type="email" id="bekosoft149@gmail.com"
+                  data-i18n="emailInputLabel">Email</label>
+                <input type="email" id="email"
                   class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                   data-i18n-placeholder="emailPlaceholder" placeholder="example@domain.com">
               </div>
             </div>
             <div>
               <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                data-i18n="subjectLabel">الموضوع</label>
+                data-i18n="subjectLabel">Subject</label>
               <input type="text" id="subject"
                 class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
-                data-i18n-placeholder="subjectPlaceholder" placeholder="كيف يمكننا مساعدتك؟">
+                data-i18n-placeholder="subjectPlaceholder" placeholder="How can we help you?">
             </div>
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                data-i18n="messageLabel">الرسالة</label>
+                data-i18n="messageLabel">Message</label>
               <textarea id="message" rows="4"
                 class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
-                data-i18n-placeholder="messagePlaceholder" placeholder="اكتب رسالتك هنا..."></textarea>
+                data-i18n-placeholder="messagePlaceholder" placeholder="Write your message here..."></textarea>
             </div>
             <button type="submit"
               class="w-full px-8 py-4 rounded-lg bg-gradient-to-r from-brand-blue to-blue-600 text-white font-bold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
               data-i18n="sendMessage">
-              إرسال الرسالة
+              Send Message
             </button>
           </form>
         </div>
@@ -869,15 +882,15 @@
         </div>
 
         <div class="flex space-x-6 space-x-reverse mb-6 md:mb-0">
-          <a href="#home" class="text-gray-400 hover:text-white transition-colors" data-i18n="home">الرئيسية</a>
-          <a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="services">خدماتنا</a>
-          <a href="#portfolio" class="text-gray-400 hover:text-white transition-colors" data-i18n="works">أعمالنا</a>
-          <a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="about">من نحن</a>
-          <a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="contact">تواصل معنا</a>
+          <a href="#home" class="text-gray-400 hover:text-white transition-colors" data-i18n="home">Home</a>
+          <a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="services">Services</a>
+          <a href="#portfolio" class="text-gray-400 hover:text-white transition-colors" data-i18n="works">Works</a>
+          <a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="about">About</a>
+          <a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="contact">Contact</a>
         </div>
 
         <div class="text-gray-500 text-sm" data-i18n="copyright">
-          &copy; 2025 BAKRI Studio. جميع الحقوق محفوظة.
+          &copy; 2025 BAKRI Studio. All rights reserved.
         </div>
       </div>
     </div>
@@ -964,9 +977,9 @@
     const brandData = [
       {
         id: 1,
-        title: 'لومينا للمنازل الذكية',
-        category: 'تقنية & IoT',
-        description: 'هوية مستقبلية لنظام بيئي للمنازل الذكية. ركزنا على الخطوط النظيفة ولوحة ألوان زرقاء نابضة بالحياة لنقل الثقة، الذكاء، والاتصال السلس.',
+        titleKey: 'brand1Title',
+        catKey: 'brandCat1',
+        descKey: 'brand1Desc',
         colors: ['#0F172A', '#3B82F6', '#60A5FA', '#F1F5F9'],
         images: [
           'image/1/Hiv (1).jpg',
@@ -983,9 +996,9 @@
       },
       {
         id: 2,
-        title: 'فيلفيت & فاين',
-        category: 'أزياء & لايف ستايل',
-        description: 'لغة بصرية أنيقة وعضوية لعلامة تجارية للملابس المستدامة. تعكس الألوان الترابية والخطوط الكلاسيكية الطبيعة، الفخامة، والأسلوب الخالد.',
+        titleKey: 'brand2Title',
+        catKey: 'brandCat2',
+        descKey: 'brand2Desc',
         colors: ['#422006', '#A16207', '#EAB308', '#FEFCE8'],
         images: [
           'image/2/Hi (1).png',
@@ -1008,9 +1021,9 @@
       },
       {
         id: 3,
-        title: 'نيون برست للطاقة',
-        category: 'مشروبات',
-        description: 'هوية جريئة وعالية الطاقة لمشروب رياضي جديد. تهدف الألوان النيون والطباعة الديناميكية إلى جذب الجمهور الشاب والنشط.',
+        titleKey: 'brand3Title',
+        catKey: 'brandCat3',
+        descKey: 'brand3Desc',
         colors: ['#111111', '#CCFF00', '#FF0099', '#FFFFFF'],
         images: [
           'image/3/Hiii (1).png',
@@ -1026,9 +1039,9 @@
       },
       {
         id: 4,
-        title: 'أورا سبا',
-        category: 'عناية وجمال',
-        description: 'تصميم هادئ وبسيط لمنتجع صحي فاخر. تستحضر لوحة الألوان الباستيل الناعمة والمساحات البيضاء الواسعة شعوراً بالهدوء والاسترخاء.',
+        titleKey: 'brand4Title',
+        catKey: 'brandCat4',
+        descKey: 'brand4Desc',
         colors: ['#Fdfbf7', '#D4A5A5', '#9CBFA7', '#555555'],
         images: [
           'image/5/Hii (1).png',
@@ -1043,9 +1056,9 @@
       },
       {
         id: 5,
-        title: 'Hiiv',
-        category: 'هوية بصرية',
-        description: 'هوية بصرية حديثة وجريئة تعكس الابتكار والنمو.',
+        titleKey: 'brand5Title',
+        catKey: 'brandCat5',
+        descKey: 'brand5Desc',
         colors: ['#000000', '#FFFFFF', '#FFD700'],
         images: [
           'image/4/Hiiv (1).png',
@@ -1079,9 +1092,9 @@
       currentImageIndex = 0;
 
       // Populate Modal Data
-      document.getElementById('modal-title').textContent = project.title;
-      document.getElementById('modal-category').textContent = project.category;
-      document.getElementById('modal-description').textContent = project.description;
+      document.getElementById('modal-title').textContent = translations[currentLang][project.titleKey];
+      document.getElementById('modal-category').textContent = translations[currentLang][project.catKey];
+      document.getElementById('modal-description').textContent = translations[currentLang][project.descKey];
 
       // Colors
       const colorsContainer = document.getElementById('modal-colors');
@@ -1178,7 +1191,7 @@
         contact: 'Contact',
         heroTitle1: 'Creative Vision.',
         heroTitle2: 'Smart Tech.',
-        heroDesc: 'We blend creativity with cutting-edge technology to bring your ideas to life. From stunning designs to powerful applications, we re your partners in innovation My personal approach is under development... I well be back soon with exciting new content.',
+        heroDesc: 'We blend creativity with cutting-edge technology to bring your ideas to life. From stunning designs to powerful applications, we are your partners in innovation My personal approach is under development... I will be back soon with exciting new content.',
         ctaPrimary: 'Explore Services',
         ctaSecondary: 'Get in Touch',
         viewMore: 'View More',
@@ -1269,14 +1282,18 @@
         brand4Title: 'Aura Spa',
         brandCat5: 'Visual Identity',
         brand5Title: 'Hiiv',
+        brand1Desc: 'A futuristic identity for a smart home ecosystem. Clean lines and a vibrant blue palette convey trust, intelligence, and seamless connectivity.',
+        brand2Desc: 'An elegant and organic visual language for a sustainable clothing brand. Earthy tones and classic typography reflect nature, luxury, and timeless style.',
+        brand3Desc: 'A bold, high-energy identity for a new sports drink. Neon colors and dynamic typography aim to attract a young, active audience.',
+        brand4Desc: 'A serene and minimalist design for a luxury spa. Soft pastel colors and ample white space evoke a sense of calm and relaxation.',
+        brand5Desc: 'A modern and bold visual identity reflecting innovation and growth.',
         loadMore: 'Load More',
         colorSystem: 'Color System',
         // Clients Section
         successPartners: 'Success Partners',
         // About Section
         aboutTitle: 'About Bakri Studio',
-        aboutDesc1: 'Hello, I'm Bakri Ali. I'm a passionate designer, developer, and creative, and I believe in the power of digital innovation. For me, it's not just about design; it's about transforming brilliant ideas into tangible realities.
-I believe that a good idea needs perfect execution, and that's what I dedicate myself to in every project. My mission is to transform my clients' vision into an unforgettable digital experience—something beautiful and effective.',
+        aboutDesc1: 'Hello, I\'m Bakri Ali. I\'m a passionate designer, developer, and creative, and I believe in the power of digital innovation. For me, it\'s not just about design; it\'s about transforming brilliant ideas into tangible realities. I believe that a good idea needs perfect execution, and that\'s what I dedicate myself to in every project. My mission is to transform my clients\' vision into an unforgettable digital experience—something beautiful and effective.',
         aboutDesc2: 'We approach every project with a collaborative spirit, working closely with our clients to understand their unique goals. With a focus on quality, creativity, and technology, we deliver solutions that drive growth and create lasting impact.',
         letsStart: 'Let\'s Start Together',
         // Contact Section
@@ -1285,7 +1302,7 @@ I believe that a good idea needs perfect execution, and that's what I dedicate m
         addressLabel: 'Address',
         addressValue: '123 Tech Street, City',
         emailLabel: 'Email',
-        emailValue: 'bekosoft149@gamil.com.com',
+        emailValue: 'bekosoft149@gmail.com',
         phoneLabel: 'Phone',
         phoneValue: '+249 922225399',
         nameLabel: 'Name',
@@ -1298,7 +1315,7 @@ I believe that a good idea needs perfect execution, and that's what I dedicate m
         messagePlaceholder: 'Write your message here...',
         sendMessage: 'Send Message',
         // Footer
-        copyright: '© 2024 BAKRI Studio. All rights reserved.'
+        copyright: '© 2025 BAKRI Studio. All rights reserved.'
       },
       ar: {
         home: 'الرئيسية',
@@ -1309,7 +1326,7 @@ I believe that a good idea needs perfect execution, and that's what I dedicate m
         heroTitle1: 'رؤية إبداعية.',
         heroTitle2: 'تقنية ذكية.',
         heroDesc: 'نمزج الإبداع مع التكنولوجيا المتطورة لإحياء أفكارك. من التصاميم المذهلة إلى التطبيقات القوية، نحن شركاؤك في الابتكار. موقفي الشخصي قيد التطوير ... سأعود قريباً بمحتوى جديد ومثير ',
-        ctaPrimary: 'استكشف الخدمات', 
+        ctaPrimary: 'استكشف الخدمات',
         ctaSecondary: 'تواصل معنا',
         viewMore: 'عرض المزيد',
         // Services
@@ -1399,6 +1416,11 @@ I believe that a good idea needs perfect execution, and that's what I dedicate m
         brand4Title: 'أورا سبا',
         brandCat5: 'هوية بصرية',
         brand5Title: 'Hiiv',
+        brand1Desc: 'هوية مستقبلية لنظام بيئي للمنازل الذكية. ركزنا على الخطوط النظيفة ولوحة ألوان زرقاء نابضة بالحياة لنقل الثقة، الذكاء، والاتصال السلس.',
+        brand2Desc: 'لغة بصرية أنيقة وعضوية لعلامة تجارية للملابس المستدامة. تعكس الألوان الترابية والخطوط الكلاسيكية الطبيعة، الفخامة، والأسلوب الخالد.',
+        brand3Desc: 'هوية جريئة وعالية الطاقة لمشروب رياضي جديد. تهدف الألوان النيون والطباعة الديناميكية إلى جذب الجمهور الشاب والنشط.',
+        brand4Desc: 'تصميم هادئ وبسيط لمنتجع صحي فاخر. تستحضر لوحة الألوان الباستيل الناعمة والمساحات البيضاء الواسعة شعوراً بالهدوء والاسترخاء.',
+        brand5Desc: 'هوية بصرية حديثة وجريئة تعكس الابتكار والنمو.',
         loadMore: 'عرض المزيد',
         colorSystem: 'نظام الألوان',
         // Clients Section
@@ -1431,7 +1453,7 @@ I believe that a good idea needs perfect execution, and that's what I dedicate m
       }
     };
 
-    let currentLang = 'ar'; // Default language is Arabic
+    let currentLang = 'en'; // Default language is English
 
     let isLanguageSwitching = false; // Flag to prevent multiple clicks
 

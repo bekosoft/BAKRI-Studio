@@ -211,40 +211,59 @@
           style="animation-delay: 2s"></div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div
-          class="inline-block mb-6 px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm animate-fade-in-up">
-          <span
-            class="text-sm font-medium bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
-            Digital Creative Agency
-          </span>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2 text-center md:text-start">
+            <div
+              class="inline-block mb-6 px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm animate-fade-in-up">
+              <span
+                class="text-sm font-medium bg-gradient-to-r from-brand-blue to-brand-orange bg-clip-text text-transparent">
+                Digital Creative Agency
+              </span>
+            </div>
 
-        <h1
-          class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-8 leading-tight animate-fade-in-up"
-          style="animation-delay: 0.1s">
-          <span class="block" data-i18n="heroTitle1">Creative Vision.</span>
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-orange"
-            data-i18n="heroTitle2">Smart Tech.</span>
-        </h1>
+            <h1
+              class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-8 leading-tight animate-fade-in-up"
+              style="animation-delay: 0.1s">
+              <span class="block" data-i18n="heroTitle1">Creative Vision.</span>
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-orange"
+                data-i18n="heroTitle2">Smart Tech.</span>
+            </h1>
 
-        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-400 mb-10 animate-fade-in-up"
-          style="animation-delay: 0.2s" data-i18n="heroDesc">
-          We blend creativity with cutting-edge technology to bring your ideas to life. From stunning designs to robust
-          applications, we are your partners in innovation.
-        </p>
+            <p class="mt-4 text-xl text-gray-500 dark:text-gray-400 mb-10 animate-fade-in-up"
+              style="animation-delay: 0.2s" data-i18n="heroDesc">
+              We blend creativity with cutting-edge technology to bring your ideas to life. From stunning designs to
+              robust
+              applications, we are your partners in innovation.
+            </p>
 
-        <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s">
-          <a href="#services"
-            class="px-8 py-4 rounded-full bg-brand-blue text-white font-bold text-lg hover:bg-blue-600 transition-all shadow-lg hover:shadow-brand-blue/30 transform hover:-translate-y-1"
-            data-i18n="ctaPrimary">
-            Explore Services
-          </a>
-          <a href="#contact"
-            class="px-8 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            data-i18n="ctaSecondary">
-            Get in Touch
-          </a>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 animate-fade-in-up"
+              style="animation-delay: 0.3s">
+              <a href="#services"
+                class="px-8 py-4 rounded-full bg-brand-blue text-white font-bold text-lg hover:bg-blue-600 transition-all shadow-lg hover:shadow-brand-blue/30 transform hover:-translate-y-1"
+                data-i18n="ctaPrimary">
+                Explore Services
+              </a>
+              <a href="#contact"
+                class="px-8 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                data-i18n="ctaSecondary">
+                Get in Touch
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="w-full md:w-1/2 flex justify-center md:justify-end animate-fade-in-up"
+            style="animation-delay: 0.2s">
+            <div class="relative w-72 h-72 md:w-96 md:h-96">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-brand-blue to-brand-orange rounded-full blur-[20px] opacity-30 animate-pulse">
+              </div>
+              <img src="w3.jpg" alt="Profile"
+                class="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-2xl">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -555,8 +574,8 @@
           <div class="lg:w-1/2 relative">
             <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-orange/20 rounded-full blur-xl"></div>
             <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-blue/20 rounded-full blur-xl"></div>
-            <img src="https://picsum.photos/600/400?grayscale" alt="About Bakri Studio"
-              class="relative rounded-2xl shadow-2xl w-full object-cover z-10">
+            <img src="log.png" alt="About Bakri Studio"
+              class="relative rounded-2xl shadow-2xl w-full object-contain z-10 bg-white/5 backdrop-blur-sm">
           </div>
           <div class="lg:w-1/2 space-y-6">
             <h2 class="text-3xl md:text-4xl font-bold text-brand-dark dark:text-white" data-i18n="aboutTitle">About
@@ -614,7 +633,7 @@
               </div>
               <div>
                 <h3 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="addressLabel">Address</h3>
-                <p class="text-gray-600 dark:text-gray-400" data-i18n="addressValue">123 Tech Street, City</p>
+                <p class="text-gray-600 dark:text-gray-400" data-i18n="addressValue">Sudan - Khartoum North</p>
               </div>
             </div>
 
@@ -725,8 +744,12 @@
           <a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="contact">Contact</a>
         </div>
 
-        <div class="text-gray-500 text-sm" data-i18n="copyright">
-          &copy; 2025 BAKRI Studio. All rights reserved.
+        <div class="flex flex-col items-center gap-1 md:gap-2">
+          <span class="text-gray-500 text-[10px] md:text-xs opacity-70" data-i18n="disclaimer">Note: Some displayed
+            designs are unofficial/concept projects.</span>
+          <div class="text-gray-500 text-sm" data-i18n="copyright">
+            &copy; 2025 BAKRI Studio. All rights reserved.
+          </div>
         </div>
       </div>
     </div>
@@ -1165,6 +1188,14 @@
         motion5Desc: 'Energetic promotional video',
         motion6Title: 'App Demo',
         motion6Desc: 'Interactive app showcase animation',
+        motion7Title: 'Cinematic VFX',
+        motion7Desc: 'High-quality visual effects composition',
+        motion8Title: 'Dynamic Motion',
+        motion8Desc: 'Fluid motion graphics and transitions',
+        motion9Title: '3D Animation',
+        motion9Desc: 'Abstract 3D motion design',
+        motion10Title: 'Commercial Edit',
+        motion10Desc: 'Professional video editing and color grading',
         // Graphic Design Section
         'graphic-badge': 'Graphic Design',
         'graphic-title': 'Visual Excellence',
@@ -1221,7 +1252,7 @@
         contactTitle: 'Contact Us',
         contactDesc: 'Have a project in mind? We\'d love to hear from you.',
         addressLabel: 'Address',
-        addressValue: '123 Tech Street, City',
+        addressValue: 'Sudan - Khartoum North',
         emailLabel: 'Email',
         emailValue: 'bekosoft149@gmail.com',
         phoneLabel: 'Phone',
@@ -1236,7 +1267,8 @@
         messagePlaceholder: 'Write your message here...',
         sendMessage: 'Send Message',
         // Footer
-        copyright: '© 2025 BAKRI Studio. All rights reserved.'
+        copyright: '© 2025 BAKRI Studio. All rights reserved.',
+        disclaimer: 'Note: Some displayed designs are unofficial/concept projects.'
       },
       ar: {
         home: 'الرئيسية',
@@ -1299,6 +1331,14 @@
         motion5Desc: 'فيديو ترويجي نشط',
         motion6Title: 'عرض التطبيق',
         motion6Desc: 'رسوم متحركة تفاعلية لعرض التطبيق',
+        motion7Title: 'مؤثرات سينمائية',
+        motion7Desc: 'تركيب مؤثرات بصرية عالية الجودة',
+        motion8Title: 'حركة ديناميكية',
+        motion8Desc: 'موشن جرافيك وانتقالات سلسة',
+        motion9Title: 'تحريك ثلاثي الأبعاد',
+        motion9Desc: 'تصميم حركة ثلاثي الأبعاد تجريدي',
+        motion10Title: 'مونتاج إعلاني',
+        motion10Desc: 'تحرير فيديو احترافي وتصحيح ألوان',
         // Graphic Design Section
         'graphic-badge': 'تصميم جرافيك',
         'graphic-title': 'التميز البصري',
@@ -1355,7 +1395,7 @@
         contactTitle: 'تواصل معنا',
         contactDesc: 'لديك مشروع في ذهنك؟ نود أن نسمع منك.',
         addressLabel: 'العنوان',
-        addressValue: '١٢٣ شارع التقنية، المدينة',
+        addressValue: 'السودان - الخرطوم بحري',
         emailLabel: 'البريد الإلكتروني',
         emailValue: 'bekosoft149@gmail.com',
         phoneLabel: 'الهاتف',
@@ -1370,7 +1410,9 @@
         messagePlaceholder: 'اكتب رسالتك هنا...',
         sendMessage: 'إرسال الرسالة',
         // Footer
-        copyright: '© 2024 BAKRI Studio. جميع الحقوق محفوظة.'
+        copyright: '© 2024 BAKRI Studio. جميع الحقوق محفوظة.',
+        copyright: '© 2024 BAKRI Studio. جميع الحقوق محفوظة.',
+        disclaimer: 'تنويه: بعض التصاميم المعروضة هي مشاريع مفاهيمية غير رسمية.'
       }
     };
 
@@ -1579,7 +1621,10 @@
     // ============================================
 
     const motionGraphicsData = [
-      // Video folder is currently empty - content will be added later
+      { image: 'moto/0001-0237.mp4', titleKey: 'motion7Title', descKey: 'motion7Desc' },
+      { image: 'moto/4.mp4', titleKey: 'motion8Title', descKey: 'motion8Desc' },
+      { image: 'moto/6.mp4', titleKey: 'motion9Title', descKey: 'motion9Desc' },
+      { image: 'moto/vfx 1122.mp4', titleKey: 'motion10Title', descKey: 'motion10Desc' }
     ];
 
     function renderMotionGraphics() {
@@ -1613,6 +1658,8 @@
     // ============================================
 
     const graphicDesignData = [
+      { image: 'des/1..jpg' },
+      { image: 'des/2..jpg' },
       { image: 'des/p (1).jpg' },
       { image: 'des/p (2).jpg' },
       { image: 'des/p (3).jpg' },
@@ -1685,11 +1732,15 @@
         }
 
         // For motion graphics, show with text
+        const isVideo = item.image.toLowerCase().endsWith('.mp4');
+        const mediaContent = isVideo
+          ? `<video src="${item.image}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" autoplay loop muted playsinline></video>`
+          : `<img src="${item.image}" alt="${translations[currentLang][item.titleKey]}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">`;
+
         return `
           <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer bg-gray-900 border border-gray-800">
             <div class="aspect-video overflow-hidden">
-              <img src="${item.image}" alt="${translations[currentLang][item.titleKey]}" 
-                   class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+              ${mediaContent}
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">

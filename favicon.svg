@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0C0D10" />
+  <circle cx="32" cy="32" r="26" stroke="#CFA86E" stroke-width="2" stroke-opacity="0.3" />
+  <!-- Aperture Blades -->
+  <path d="M32 14 L42 28 L35 32 Z" fill="#CFA86E" />
+  <path d="M50 32 L36 42 L32 35 Z" fill="#CFA86E" fill-opacity="0.9" />
+  <path d="M32 50 L22 36 L29 32 Z" fill="#CFA86E" fill-opacity="0.8" />
+  <path d="M14 32 L28 22 L32 29 Z" fill="#CFA86E" fill-opacity="0.7" />
+  <circle cx="32" cy="32" r="6" fill="#0C0D10" stroke="#CFA86E" stroke-width="2" />
+</svg>

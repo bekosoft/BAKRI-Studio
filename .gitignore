@@ -1,0 +1,37 @@
+# Node.js
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# سكريبت الضغط المؤقت
+compress_assets.mjs
+
+# ملفات النظام - Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ملفات النظام - Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ملفات المحررات
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# ملفات مؤقتة
+*.tmp
+*.temp
+*.log
+
+# ملفات البيئة
+.env
+.env.local
+.env.production
